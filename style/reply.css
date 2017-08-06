@@ -44,7 +44,7 @@ nav , .nav-submenu-list{
     cursor:pointer;
     margin-left:10px;
 }
-.nav-list-item{text-align: center;}
+.nav-list-item{text-align: center; z-index: 9999;}
 .nav-list-item a{
     color:white;
       display: block;
