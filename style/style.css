@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* 30no2 2017-08-06 */
+
+/* basic */
+
+ul{margin:0;padding:0;}
+a{text-decoration: none;color:white;}
+a:hover{
+    text-decoration: underline;
+    opacity:0.8;filter:alpha(opacity=80); /* 针对 IE8 以及更早的版本 设置透明度*/
+}
+li{list-style-type: none;}
+nav , .nav-submenu-list{
+    /* height:30px;
+    line-height: 30px; */
+    background:#25383C;text-align: center;/* 为了让文字居中 */}
+
+/* 清除浮动 */
+.clearfix{content:"";display: block;clear:both;}
+
+/* nav */
+
+.nav-container-list{
+    max-width: 1280px;
+    margin:0 auto;
+}
+.nav-list-item{
+    position: relative;
+    color:white;
+    display: inline-block; 
+    /* float: left; */
+    /* width:25%;
+    width:calc(100%/4);      浏览器计算每个按钮的宽度   */
+}
+.nav-list-item a{
+    display: block;    /* 设置为块元素才能使上下边距生效 */
+    padding:20px 40px;
+}
+.nav-submenu-list{
+    position: absolute;
+    left: 0;
+    top:100%;
+    display: none;
+}
+.nav-list-item:hover>ul{
+    display: block;
+}
+
+
+

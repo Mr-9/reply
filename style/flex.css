@@ -1,0 +1,34 @@
+@charset "utf-8";
+/* 30no2 2017-08-06 
+*伸缩布局
+*/
+
+/* 启用伸缩布局 */
+.flex-enable{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+/* 子元素横向排列 */
+.flex-row{
+    /* box-direction / box-orient / flexbox-direction 在某些旧版本浏览器上生效 */
+    -moz-box-direction: row;
+    -webkit-box-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-flex-direction:row;
+    -ms-flexbox-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+/* 子元素平均分布在父容器中 */
+.flex-justify-space-around{
+    /* flex-pack / box-pack 在某些旧浏览器中生效 */
+    justify-content: space-around;
+    -webkit-justify-content:space-around;
+    -ms-flex-pack: justify;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+}
