@@ -16,7 +16,7 @@ nav , .nav-submenu-list{
     background:#25383C;text-align: center;/* 为了让文字居中 */}
 
 /* 清除浮动 */
-.clearfix{content:"";display: block;clear:both;}
+.clearfix:after{content:"";display: block;clear:both;}
 
 /* nav */
 

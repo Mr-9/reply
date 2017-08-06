@@ -3,7 +3,7 @@
 
 /* basic */
 
-ul{margin:0;padding:0;}
+ul,h1{margin:0;padding:0;}
 a{text-decoration: none;color:white;}
 a:hover{
     text-decoration: underline;
@@ -60,7 +60,82 @@ nav , .nav-submenu-list{
     display: none;
 }
 
+
+
+/* header */
+header{
+    display: block;
+    font-size: 1.125rem;    /* 18px/16px=1.125em */
+    font-weight: 700;
+    position: relative;
+    height:500px;    /* fallback */
+    height:80vh;
+    background:#74DBE8;
+    min-height: 300px;
+    max-height: 1080px;
+    background:#74DBE8 url('img/header-bg.jpg') no-repeat 50% 0;
+    background-size:cover;
+}
+.header-text-container{
+    text-align: center;
+    color:white;
+    text-shadow: 1px 1px 4px rgba(34, 34, 34, 0.6);
+
+    /* height:30%;
+    width:50%; */
+    /* position:absolute;
+    top:50%;
+    left:50%;
+
+    transform: translate(-50%, -50%); 使用flex布局*/
+
+    /* margin:-15% 0 0 -25%; */
+}
+.header-article-title{
+    font-size:2em;    /* 32px/16px=2em; */
+}
+.header-article-pub{
+    display: block;
+    font-size: 1em;    /* 16px/16px=1em */
+}
+
+/* article */
+/* 设置article的文字大小，移动优先
+* 默认在移动设备上
+*
+*内边距为20px
+*字体大小，行高，最大宽度等可以继续在后面的样式中沿用
+*/
+
+article{
+    font-size:1rem;
+    line-height: 1.625rem;    /* 26px/16px 黄金比例*/
+    max-width:42.8125em;      /* 685px/16px 黄金比例*/
+    margin:0 auto;
+    box-sizing:border-box;    /* 不会使padding撑大盒子 */
+    padding:1.25em;           /* 20px/16px */
+    background:bisque;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media all and (min-width:480px){
+
+ /* nav */
+
     .nav-list-item{
           /* display: inline-block;   flex布局*/
         position: relative;
@@ -80,4 +155,39 @@ nav , .nav-submenu-list{
     .menu-btn{
         display: none;
     }
+
+/* header */
+
+    header{
+        font-size:2.5em;         /* 40px/16px */
+    }
+    /* .header-article-title{
+        font-size: 2em;         80px/40px=1em 
+    }*/
+    /*.header-article-pub{
+        display: block;
+        font-size:1em;         40px/40px=0.5px 
+    } */
+
 }
+
+/* article */
+/* 当页面宽度在685px与600px 之间时 */
+/* 调整内边距为40px */
+@media all and (min-width:600px) and (max-width:685px){
+    article{
+        padding:2.5em;        /* 40px/16px  */
+    }
+}
+/* 当页面宽度大于或等于685px的时候，符合最佳宽度，将内边距设置为0 */
+@media all and (min-width:685px){
+    article{
+        padding:0;
+        margin-top:2.5em;        /* 40px/16px */
+    }
+}
+
+
+
+
+
