@@ -9,12 +9,12 @@ menuBtn.onclick = function(){
     menuIsCollapse =!menuIsCollapse;
     if(menuIsCollapse){
         menu.style.display = 'block';
-        btn.classList.remove('btn-icon-close');
-        btn.classList.add('btn-icon-menu');
+        btn.classList.remove('icon-menu');
+        btn.classList.add('icon-cross');
     }else{
         menu.style.display = 'none';
-        btn.classList.remove('btn-icon-menu');
-        btn.classList.add('btn-icon-close');
+        btn.classList.remove('icon-cross');
+        btn.classList.add('icon-menu');
 
     }
 }

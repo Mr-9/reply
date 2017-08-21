@@ -29,11 +29,16 @@ nav , .nav-submenu-list{
     border: none;
     padding:8px 0;
 }
-.btn-icon-close{
+/* .btn-icon-close{
     background:#ccc url("img/btn-close.png") no-repeat center center;
 }
 .btn-icon-menu{
     background:blue url("img/btn-menu.png") no-repeat center center;
+} */
+.menu-btn:after{
+    content: '';
+    display: block;
+    clear:both;
 }
 .menu-btn-icon{
     border:none;
@@ -42,7 +47,10 @@ nav , .nav-submenu-list{
     background-size:cover;    /* 保证背景图始终覆盖容器 */
     float:left;
     cursor:pointer;
-    margin-left:10px;
+     margin-left:10px; 
+    text-align: center;
+    line-height: 30px!important;
+    text-decoration: none!important;
 }
 .nav-list-item{text-align: center; z-index: 9999;}
 .nav-list-item a{
